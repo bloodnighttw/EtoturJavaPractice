@@ -1,0 +1,22 @@
+
+public class Main
+{
+
+public static void main(String[] args){
+	   int i=0;
+	   int[] roads= {0,1,2,1,2,1,2,1,2,1,2,1,9};
+	   while(roads[i]!=9) {	
+		   
+
+		
+		   System.out.println("Forward");
+		   System.out.println("Turn Left");
+		   System.out.println("Forward");
+		   System.out.println("Turn Right");
+		   i=i+2;
+	   }
+
+	   
+   }
+}
+
