@@ -1,0 +1,41 @@
+//18
+import java.util.*;  
+public class Main  
+{  
+   public static void main(String[] args)  
+   {  
+    Scanner sc = new Scanner(System.in);  
+    int x=0;  
+     x =sc.nextInt();  
+//  Scanner min = new Scanner(System.in);  
+     int[] sum=new int[x] ;  
+    for(int i=0;i<x;i++) sum[i] = sc.nextInt();  
+      
+//  int mins;mins=sum[0];  
+      
+     compareTo(sum);  
+      
+    for(int i=x-1;i>=0;i--)  
+    if(i==0)System.out.print(sum[i]+"\n");    
+    else System.out.print(sum[i]+" ");    
+  
+     
+   }  
+     
+  
+      public  static  void compareTo( int []arr){  
+         int temp =0 ;  
+         for ( int i = 0;i<arr.length;i++ ){  
+                     for ( int j = 0;j<arr.length;j++ ){  
+                         if (arr[i]<arr[j]&&i< j){  
+                             temp = arr[i];  
+                             arr[i] = arr[j] ;  
+                             arr[j] = temp;  
+                           continue ;  
+                        } else {  
+                            continue ;                      
+                        }  
+                    }              
+                 }          
+       }  
+}  
