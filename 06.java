@@ -1,5 +1,5 @@
 
-public class Main
+public class 06
 {
 
 public static void main(String[] args){
@@ -14,6 +14,7 @@ public static void main(String[] args){
 		   System.out.println("Forward");
 		   System.out.println("Turn Right");
 		   i=i+2;
+		   //因為每前進一步就s(這邊是i)要+1  有兩個前進   所以+2
 	   }
 
 	   
