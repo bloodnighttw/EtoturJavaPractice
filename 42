@@ -1,0 +1,39 @@
+// 42
+import java.util.Scanner;
+
+public class Main {
+static int i;
+	public static void main(String[] args) {
+
+		int[] a= {0,1,2,3,4,5,6,7};
+		Scanner sc = new Scanner(System.in);  
+		int goal=sc.nextInt();
+		int first=0,end=a.length-1;
+		int ans=two(a,goal,first,end);
+		if(a[6]!=goal&&ans==6)		System.out.println("-1");
+		else if(a[0]!=goal&&ans==0)		System.out.println("-1");
+		else System.out.println(ans);
+
+	}
+
+	public static int two(int[] a,int goal,int first,int end) {
+		
+
+			
+		if(i==(first+end)/2) return (first+end)/2;
+		
+		if(a[end]==goal) return end;
+		
+		if(goal<a[(first+end)/2]) {   
+			i=(first+end)/2;
+			return two(a,goal,first,(first+end)/2);
+			}
+		if(goal>a[(first+end)/2]) {	  
+			i=(first+end)/2;
+			return two(a,goal,(first+end)/2,end);
+			}
+		
+		return (first+end)/2;
+		
+	}
+}
