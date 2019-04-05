@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int a;
+		String st;
+		st=sc.nextLine();
+		a=st.length();
+		char[] ans=new char[a];
+		ans=st.toCharArray();
+		int i;
+		for(i=0;i<=a/2;i++) {
+			if(ans[i]!=ans[a-1-i]) {
+				System.out.println(st+" is not a palindrome.");
+				break;
+			}else if(i==a/2) {
+				System.out.println(st+" is a palindrome.");
+				break;
+				
+			}	
+		}
+	}
+}
