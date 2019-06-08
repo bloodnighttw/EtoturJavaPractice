@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int beginning=sc.nextInt();
+		int[] month=new int[44];//40to43 avoid error
+
+		int passMonth=sc.nextInt()+1;
+		for(int i=0;i<=40;i++) {
+			if(i==0) {		
+				month[0]=beginning;
+				month[3]=0-beginning;
+				continue;
+			}
+			int add=(month[i-1]/2)*3;
+
+			
+			month[i+3]=0-add;
+			month[i]=add+month[i]+month[i-1];
+			
+			//System.out.println("add "+add+"month "+month[i]);
+			
+		}
+		
+		System.out.println(beginning+" "+(passMonth-1)+" "+month[passMonth-1]);
+		sc.close();
+
+	}
+
+}
